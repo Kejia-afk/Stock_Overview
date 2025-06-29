@@ -1,0 +1,106 @@
+/* 每日市场情绪分析样式 */
+
+.market-sentiment-analysis {
+  width: 100%;
+}
+
+.market-effect-section {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  transition: transform 0.2s;
+}
+
+.market-effect-section:hover {
+  transform: translateY(-3px);
+}
+
+.profit-effect {
+  border-left: 4px solid var(--color-success);
+}
+
+.loss-effect {
+  border-left: 4px solid var(--color-danger);
+}
+
+.effect-summary {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: var(--spacing-md);
+}
+
+.effect-description {
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text-primary);
+}
+
+.example-stocks h4 {
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.stocks-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.stock-tag {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 20px;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.stock-tag:hover {
+  transform: scale(1.05);
+}
+
+.stock-tag.up {
+  background-color: rgba(0, 200, 83, 0.2);
+  color: var(--color-success);
+}
+
+.stock-tag.down {
+  background-color: rgba(255, 61, 0, 0.2);
+  color: var(--color-danger);
+}
+
+.add-stock-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px dashed var(--color-border);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-stock-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-text-primary);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .effect-summary {
+    font-size: 16px;
+  }
+  
+  .effect-description {
+    font-size: 14px;
+  }
+  
+  .stock-tag {
+    font-size: 12px;
+  }
+}

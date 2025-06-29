@@ -1,0 +1,183 @@
+/* 个股分析样式 */
+
+.stock-analysis {
+  width: 100%;
+}
+
+/* 股票搜索区域 */
+.stock-search-section {
+  display: flex;
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+}
+
+.stock-search-input {
+  flex: 1;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-secondary);
+  border-radius: var(--border-radius);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+  margin-right: var(--spacing-md);
+}
+
+/* 股票基本信息 */
+.stock-info-section {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-lg);
+}
+
+.stock-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.stock-code {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-left: var(--spacing-md);
+}
+
+.stock-price-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.stock-price {
+  font-size: 32px;
+  font-weight: bold;
+  margin-right: var(--spacing-md);
+}
+
+/* K线图区域 */
+.kline-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.chart-controls {
+  display: flex;
+  justify-content: space-between;
+  margin: var(--spacing-md) 0;
+}
+
+.time-period-selector,
+.indicator-selector {
+  display: flex;
+}
+
+.time-period-selector .btn,
+.indicator-selector .btn {
+  margin-right: var(--spacing-xs);
+}
+
+.btn.active {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.kline-chart {
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.chart-placeholder {
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.chart-note {
+  font-size: 12px;
+  margin-top: var(--spacing-sm);
+}
+
+/* 技术指标区域 */
+.technical-indicators-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.indicators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.indicator-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+}
+
+.indicator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.indicator-status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.indicator-status.up {
+  background-color: var(--color-up);
+}
+
+.indicator-status.down {
+  background-color: var(--color-down);
+}
+
+.indicator-status.neutral {
+  background-color: var(--color-neutral);
+}
+
+.indicator-value {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.indicator-description {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+/* 资金流向区域 */
+.capital-flow-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.capital-flow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+  .capital-flow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.capital-flow-item {
+  text-align: center;
+}
+
+.capital-flow-label {
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-secondary);
+}
+
+.capital-flow-value {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: bold;
+}

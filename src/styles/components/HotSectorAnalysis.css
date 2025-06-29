@@ -1,0 +1,210 @@
+/* 热门板块分析样式 */
+
+.hot-sector-analysis {
+  width: 100%;
+  padding: 30px;
+  background-color: var(--color-background);
+}
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.module-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.module-description {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+}
+
+.sector-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.sector-card {
+  padding: 25px;
+  border-radius: 12px;
+  background-color: var(--color-card-background);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.sector-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.sector-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sector-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.sector-stage {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* 板块阶段样式 */
+.stage-observe {
+  background-color: rgba(158, 158, 158, 0.2);
+  color: #9e9e9e;
+}
+
+.stage-startup {
+  background-color: rgba(33, 150, 243, 0.2);
+  color: #2196f3;
+}
+
+.stage-explosion {
+  background-color: rgba(0, 200, 83, 0.2);
+  color: var(--color-success);
+}
+
+.stage-divergence {
+  background-color: rgba(255, 152, 0, 0.2);
+  color: #ff9800;
+}
+
+.stage-reflux {
+  background-color: rgba(156, 39, 176, 0.2);
+  color: #9c27b0;
+}
+
+/* 核心个股样式 */
+.core-stocks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stock-category {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.category-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: 5px;
+}
+
+.stock-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 15px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.stock-info:hover {
+  transform: translateX(5px);
+}
+
+.stock-info.up {
+  background-color: rgba(0, 200, 83, 0.1);
+  border-color: rgba(0, 200, 83, 0.3);
+}
+
+.stock-info.down {
+  background-color: rgba(255, 61, 0, 0.1);
+  border-color: rgba(255, 61, 0, 0.3);
+}
+
+.stock-name {
+  font-weight: 600;
+}
+
+.stock-code {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.stock-change {
+  margin-left: auto;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.stock-info.up .stock-change {
+  color: var(--color-success);
+  background-color: rgba(0, 200, 83, 0.1);
+}
+
+.stock-info.down .stock-change {
+  color: var(--color-danger);
+  background-color: rgba(255, 61, 0, 0.1);
+}
+
+/* 展开更多按钮 */
+.show-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.show-more-btn {
+  background-color: var(--color-neutral-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.show-more-btn:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-text-primary);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .sector-cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .sector-name {
+    font-size: 16px;
+  }
+  
+  .stock-info {
+    font-size: 13px;
+  }
+}
